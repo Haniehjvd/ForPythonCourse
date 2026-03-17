@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_course"
+version = "0.0.1"
+description = "python course development"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "ipykernel",
+    "numpy",
+    "plotly",
+    "polars",
+    "scipy",
+    "kaleido",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+namespaces = true
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+
+docstring-code-format = true
